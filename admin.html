@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>복돌이 - 관리자 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더 -->
+        <header class="header">
+            <div class="header-text">
+                <div class="app-name">복돌이</div>
+                <div class="app-subtitle">관리자 대시보드</div>
+            </div>
+            <div class="avatar-container">
+                <img src="images/bokdolicon-remove.png" alt="Admin" class="avatar-img">
+            </div>
+        </header>
+
+        <!-- 인사말 카드 -->
+        <section class="card">
+            <div class="greeting-title">관리자님, 환영합니다!</div>
+            <div class="greeting-subtitle">오늘의 서비스 이용 현황을 확인해 보세요.</div>
+        </section>
+
+        <!-- 진행 상황 카드 -->
+        <section class="card">
+            <div class="progress-info">
+                <span>웨이트센터 이용현황</span>
+                <span>7/8 사용중</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar-inner" style="width:75%;"></div>
+            </div>
+        </section>
+        
+        <!-- 리클라이너 이용 현황 카드 -->
+        <section class="card">
+            <div class="progress-info">
+                <span>리클라이너 이용현황</span>
+                <span>8/21 사용중</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar-inner" style="width:37.5%;"></div>
+            </div>
+        </section>
+
+        <!-- 대시보드 탭 -->
+        <section class="card tab-pane active" id="dashboard-tab">
+            <div class="section-title">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                </svg>
+                서비스 이용 현황
+            </div>
+            <div class="stats-container">
+                <div class="stat-card highlight">
+                    <div class="stat-value">75%</div>
+                    <div class="stat-label">웨이트센터</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">30%</div>
+                    <div class="stat-label">리클라이너</div>
+                </div>
+            </div>
+            
+            <div class="section-subtitle">중대별 이용률</div>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-value">75%</div>
+                    <div class="stat-label">1중대</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">50%</div>
+                    <div class="stat-label">2중대</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">40%</div>
+                    <div class="stat-label">3중대</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">60%</div>
+                    <div class="stat-label">4중대</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">55%</div>
+                    <div class="stat-label">5중대</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">70%</div>
+                    <div class="stat-label">6중대</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">45%</div>
+                    <div class="stat-label">7중대</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">65%</div>
+                    <div class="stat-label">8중대</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 통계 탭 -->
+        <section class="card tab-pane" id="stats-tab">
+            <div class="section-title">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                </svg>
+                중대별 서비스 이용률
+            </div>
+            
+            <div class="chart-label">웨이트센터 이용률</div>
+            <div class="chart-container">
+                <div class="chart-bar">
+                    <div class="bar" style="height:75%;">
+                        <div class="bar-value">1/4</div>
+                        <div class="bar-label">1중대</div>
+                    </div>
+                    <div class="bar" style="height:50%;">
+                        <div class="bar-value">1/4</div>
+                        <div class="bar-label">2중대</div>
+                    </div>
+                    <div class="bar" style="height:40%;">
+                        <div class="bar-value">3/4</div>
+                        <div class="bar-label">3중대</div>
+                    </div>
+                    <div class="bar" style="height:60%;">
+                        <div class="bar-value">1/4</div>
+                        <div class="bar-label">4중대</div>
+                    </div>
+                    <div class="bar" style="height:55%;">
+                        <div class="bar-value">2/4</div>
+                        <div class="bar-label">5중대</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chart-label">리클라이너 이용률</div>
+            <div class="chart-container">
+                <div class="chart-bar">
+                    <div class="bar" style="height:30%;">
+                        <div class="bar-value">3/15</div>
+                        <div class="bar-label">단재관</div>
+                    </div>
+                    <div class="bar" style="height:50%;">
+                        <div class="bar-value">3/6</div>
+                        <div class="bar-label">학술정보원</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 시설 관리 탭 -->
+        <section class="card tab-pane" id="facilities-tab">
+            <div class="section-title">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+                </svg>
+                시설 관리
+            </div>
+            <div class="tab-list">
+                <button class="subtab active" data-sub="weightcenter">웨이트센터</button>
+                <button class="subtab" data-sub="recliner">리클라이너</button>
+                <button class="subtab" data-sub="settings">설정</button>
+            </div>
+            
+            <div id="weightcenter" class="subpane active">
+                <div class="facility-list">
+                    <div class="facility-item">
+                        <div class="facility-name">1중대 웨이트센터</div>
+                        <div class="facility-usage">3/4</div>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-name">2중대 웨이트센터</div>
+                        <div class="facility-usage">2/4</div>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-name">3중대 웨이트센터</div>
+                        <div class="facility-usage">2/4</div>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-name">4중대 웨이트센터</div>
+                        <div class="facility-usage">3/4</div>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-name">5중대 웨이트센터</div>
+                        <div class="facility-usage">3/4</div>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-name">6중대 웨이트센터</div>
+                        <div class="facility-usage">4/4</div>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-name">7중대 웨이트센터</div>
+                        <div class="facility-usage">3/4</div>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-name">8중대 웨이트센터</div>
+                        <div class="facility-usage">4/4</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="recliner" class="subpane">
+                <div class="facility-list">
+                    <div class="facility-item">
+                        <div class="facility-name">단재관 리클라이너</div>
+                        <div class="facility-usage">3/15</div>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-name">학술정보원 리클라이너</div>
+                        <div class="facility-usage">3/6</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="subpane" id="settings">
+                <div class="form-group">
+                    <label>웨이트센터 최대 이용 시간
+                        <select id="max-time">
+                            <option value="60">60분</option>
+                            <option value="90">90분</option>
+                            <option value="120" selected>120분</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>리클라이너 최대 이용 시간
+                        <select id="recliner-max-time">
+                            <option value="60">60분</option>
+                            <option value="90">90분</option>
+                            <option value="120" selected>120분</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>예약 가능 일수
+                        <select id="max-days">
+                            <option value="1">1일</option>
+                            <option value="3" selected>3일</option>
+                            <option value="7">7일</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>일일 예약 가능 회수
+                        <select id="max-bookings">
+                            <option value="1">1회</option>
+                            <option value="2" selected>2회</option>
+                            <option value="3">3회</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>자리비움 최대 시간
+                        <select id="max-away-time">
+                            <option value="10">10분</option>
+                            <option value="15" selected>15분</option>
+                            <option value="20">20분</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>운영 시작 시간
+                        <input type="time" id="open-time" value="06:00">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>운영 종료 시간
+                        <input type="time" id="close-time" value="22:00">
+                    </label>
+                </div>
+                <button class="button button-primary" id="save-settings">설정 저장</button>
+            </div>
+        </section>
+
+        <!-- 사용자 관리 탭 -->
+        <section class="card tab-pane" id="users-tab">
+            <div class="section-title">
+                <svg viewBox="0 0 24 24">
+                    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+                사용자 관리
+            </div>
+            <div class="search-bar">
+                <input type="text" class="search-input" id="user-search" placeholder="이름으로 검색...">
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>이름</th>
+                            <th>중대</th>
+                            <th>학년</th>
+                            <th>교번</th>
+                            <th>이용횟수</th>
+                            <th>상태</th>
+                            <th>관리</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body">
+                        <tr>
+                            <td>김정인</td>
+                            <td>1중대</td>
+                            <td>1학년</td>
+                            <td>20231234</td>
+                            <td>12</td>
+                            <td><span class="status-badge status-active">활성</span></td>
+                            <td>
+                                <button class="btn-action btn-edit">수정</button>
+                                <button class="btn-action btn-ban">차단</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>박서연</td>
+                            <td>3중대</td>
+                            <td>2학년</td>
+                            <td>20229876</td>
+                            <td>3</td>
+                            <td><span class="status-badge status-inactive">차단</span></td>
+                            <td>
+                                <button class="btn-action btn-edit">수정</button>
+                                <button class="btn-action btn-activate">활성화</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>이민수</td>
+                            <td>2중대</td>
+                            <td>3학년</td>
+                            <td>20215678</td>
+                            <td>20</td>
+                            <td><span class="status-badge status-active">활성</span></td>
+                            <td>
+                                <button class="btn-action btn-edit">수정</button>
+                                <button class="btn-action btn-ban">차단</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>최예준</td>
+                            <td>4중대</td>
+                            <td>4학년</td>
+                            <td>20204321</td>
+                            <td>15</td>
+                            <td><span class="status-badge status-active">활성</span></td>
+                            <td>
+                                <button class="btn-action btn-edit">수정</button>
+                                <button class="btn-action btn-ban">차단</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="action-buttons">
+                <button class="button button-primary" id="add-user">회원 추가</button>
+                <button class="button button-secondary" id="export-users">회원 목록 다운로드</button>
+            </div>
+        </section>
+
+        <!-- 예약 관리 탭 -->
+        <section class="card tab-pane" id="reservations-tab">
+            <div class="section-title">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                </svg>
+                예약 현황
+            </div>
+            <div class="tab-list">
+                <button class="subtab active" data-sub="weight-reservations">웨이트센터</button>
+                <button class="subtab" data-sub="recliner-reservations">리클라이너</button>
+            </div>
+            
+            <div class="subpane active" id="weight-reservations">
+                <div class="filter-container">
+                    <div class="form-group">
+                        <label>중대 선택:
+                            <select id="battalion-filter">
+                                <option value="all">전체 중대</option>
+                                <option value="1">1중대</option>
+                                <option value="2">2중대</option>
+                                <option value="3">3중대</option>
+                                <option value="4">4중대</option>
+                                <option value="5">5중대</option>
+                                <option value="6">6중대</option>
+                                <option value="7">7중대</option>
+                                <option value="8">8중대</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>날짜 선택:
+                            <input type="date" id="date-filter" value="2025-04-22">
+                        </label>
+                    </div>
+                    <button class="button button-primary" id="apply-filters">필터 적용</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>이름</th>
+                                <th>중대</th>
+                                <th>웨이트센터</th>
+                                <th>날짜</th>
+                                <th>시간</th>
+                                <th>상태</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservation-table-body">
+                            <tr>
+                                <td>김정인</td>
+                                <td>1중대</td>
+                                <td>1중대 웨이트센터</td>
+                                <td>2025.04.22</td>
+                                <td>09:00-10:00</td>
+                                <td><span class="status-badge status-active">이용중</span></td>
+                                <td>
+                                    <button class="btn-action btn-cancel">예약취소</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>이민수</td>
+                                <td>2중대</td>
+                                <td>2중대 웨이트센터</td>
+                                <td>2025.04.22</td>
+                                <td>10:00-11:00</td>
+                                <td><span class="status-badge status-active">이용중</span></td>
+                                <td>
+                                    <button class="btn-action btn-cancel">예약취소</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>박서연</td>
+                                <td>3중대</td>
+                                <td>3중대 웨이트센터</td>
+                                <td>2025.04.22</td>
+                                <td>13:00-14:00</td>
+                                <td><span class="status-badge status-pending">대기중</span></td>
+                                <td>
+                                    <button class="btn-action btn-cancel">예약취소</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>최예준</td>
+                                <td>4중대</td>
+                                <td>4중대 웨이트센터</td>
+                                <td>2025.04.22</td>
+                                <td>16:00-17:00</td>
+                                <td><span class="status-badge status-pending">대기중</span></td>
+                                <td>
+                                    <button class="btn-action btn-cancel">예약취소</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="subpane" id="recliner-reservations">
+                <div class="filter-container">
+                    <div class="form-group">
+                        <label>위치 선택:
+                            <select id="location-filter">
+                                <option value="all">전체 위치</option>
+                                <option value="danjae">단재관</option>
+                                <option value="library">학술정보원</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>날짜 선택:
+                            <input type="date" id="recliner-date-filter" value="2025-04-22">
+                        </label>
+                    </div>
+                    <button class="button button-primary" id="apply-recliner-filters">필터 적용</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>이름</th>
+                                <th>중대</th>
+                                <th>위치</th>
+                                <th>좌석번호</th>
+                                <th>날짜</th>
+                                <th>종료시간</th>
+                                <th>상태</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recliner-reservation-table-body">
+                            <tr>
+                                <td>김정인</td>
+                                <td>1중대</td>
+                                <td>단재관</td>
+                                <td>4번</td>
+                                <td>2025.04.22</td>
+                                <td>~10:00</td>
+                                <td><span class="status-badge status-active">이용중</span></td>
+                                <td>
+                                    <button class="btn-action btn-cancel">이용종료</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>이민수</td>
+                                <td>2중대</td>
+                                <td>단재관</td>
+                                <td>9번</td>
+                                <td>2025.04.22</td>
+                                <td>~11:00</td>
+                                <td><span class="status-badge status-away">자리비움</span></td>
+                                <td>
+                                    <button class="btn-action btn-cancel">이용종료</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>박서연</td>
+                                <td>3중대</td>
+                                <td>학술정보원</td>
+                                <td>3번</td>
+                                <td>2025.04.22</td>
+                                <td>~13:00</td>
+                                <td><span class="status-badge status-active">이용중</span></td>
+                                <td>
+                                    <button class="btn-action btn-cancel">이용종료</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 알림 관리 탭 -->
+        <section class="card tab-pane" id="notifications-tab">
+            <div class="section-title">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+                </svg>
+                알림 관리
+            </div>
+            
+            <div class="notification-composer">
+                <h3 class="subsection-title">푸시알림 전송</h3>
+                <div class="form-group">
+                    <label>대상 중대:
+                        <select id="notification-target">
+                            <option value="all">전체 중대</option>
+                            <option value="1">1중대</option>
+                            <option value="2">2중대</option>
+                            <option value="3">3중대</option>
+                            <option value="4">4중대</option>
+                            <option value="5">5중대</option>
+                            <option value="6">6중대</option>
+                            <option value="7">7중대</option>
+                            <option value="8">8중대</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>알림 제목:
+                        <input type="text" id="notification-title" placeholder="알림 제목을 입력하세요">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>알림 내용:
+                        <textarea id="notification-content" placeholder="알림 내용을 입력하세요" rows="4"></textarea>
+                    </label>
+                </div>
+                <button class="button button-primary" id="send-notification">알림 전송</button>
+            </div>
+            
+            <div class="notification-settings">
+                <h3 class="subsection-title">자동 알림 설정</h3>
+                <div class="form-group">
+                    <label><input type="checkbox" id="notification-booking" checked> 예약 확인 알림</label>
+                </div>
+                <div class="form-group">
+                    <label><input type="checkbox" id="notification-reminder" checked> 예약 시작 30분 전 알림</label>
+                </div>
+                <div class="form-group">
+                    <label><input type="checkbox" id="notification-end" checked> 이용 시간 종료 10분 전 알림</label>
+                </div>
+                <div class="form-group">
+                    <label><input type="checkbox" id="notification-away"> 자리비움 종료 5분 전 알림</label>
+                </div>
+                <button class="button button-primary" id="save-notification-settings">설정 저장</button>
+            </div>
+        </section>
+
+        <!-- 사용자 편집 모달 -->
+        <div class="modal" id="user-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 class="modal-title">사용자 정보 수정</h2>
+                <div class="form-group">
+                    <label>이름:
+                        <input type="text" id="edit-name">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>중대:
+                        <select id="edit-battalion">
+                            <option value="1">1중대</option>
+                            <option value="2">2중대</option>
+                            <option value="3">3중대</option>
+                            <option value="4">4중대</option>
+                            <option value="5">5중대</option>
+                            <option value="6">6중대</option>
+                            <option value="7">7중대</option>
+                            <option value="8">8중대</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>학년:
+                        <select id="edit-grade">
+                            <option value="1">1학년</option>
+                            <option value="2">2학년</option>
+                            <option value="3">3학년</option>
+                            <option value="4">4학년</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>교번:
+                        <input type="text" id="edit-id">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>상태:
+                        <select id="edit-status">
+                            <option value="active">활성</option>
+                            <option value="inactive">차단</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="action-buttons">
+                    <button class="button button-primary" id="save-user">저장</button>
+                    <button class="button button-secondary" id="cancel-edit">취소</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 새 사용자 추가 모달 -->
+        <div class="modal" id="add-user-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 class="modal-title">새 사용자 추가</h2>
+                <div class="form-group">
+                    <label>이름:
+                        <input type="text" id="new-name" placeholder="이름 입력">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>중대:
+                        <select id="new-battalion">
+                            <option value="1">1중대</option>
+                            <option value="2">2중대</option>
+                            <option value="3">3중대</option>
+                            <option value="4">4중대</option>
+                            <option value="5">5중대</option>
+                            <option value="6">6중대</option>
+                            <option value="7">7중대</option>
+                            <option value="8">8중대</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>학년:
+                        <select id="new-grade">
+                            <option value="1">1학년</option>
+                            <option value="2">2학년</option>
+                            <option value="3">3학년</option>
+                            <option value="4">4학년</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>교번:
+                        <input type="text" id="new-id" placeholder="교번 입력">
+                    </label>
+                </div>
+                <div class="action-buttons">
+                    <button class="button button-primary" id="create-user">추가</button>
+                    <button class="button button-secondary" id="cancel-add">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 하단 내비게이션 바 -->
+    <nav class="nav-bar">
+        <a href="#" class="nav-item active" data-tab="dashboard-tab">
+            <svg viewBox="0 0 24 24">
+                <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+            </svg>
+            <span>대시보드</span>
+        </a>
+        <a href="#" class="nav-item" data-tab="stats-tab">
+            <svg viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+            </svg>
+            <span>통계</span>
+        </a>
+        <a href="#" class="nav-item" data-tab="facilities-tab">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+            </svg>
+            <span>시설관리</span>
+        </a>
+        <a href="#" class="nav-item" data-tab="users-tab">
+            <svg viewBox="0 0 24 24">
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+            </svg>
+            <span>사용자</span>
+        </a>
+        <a href="#" class="nav-item" data-tab="reservations-tab">
+            <svg viewBox="0 0 24 24">
+                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+            </svg>
+            <span>예약현황</span>
+        </a>
+        <!-- 네비게이션 바 -->
+        <a href="#" class="nav-item" data-tab="notifications-tab">
+            <div class="nav-icon-container">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+                </svg>
+                <span class="notification-badge">3</span>
+            </div>
+            <span>알림</span>
+        </a>
+    </nav>
+
+    <script src="admin.js"></script>
+</body>
+</html>
